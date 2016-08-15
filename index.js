@@ -42,8 +42,12 @@ module.exports = (id, opts) => {
 		opts.name = 'google-chrome';
 	}
 
-	const path = extensionPath();
-	const versions = fs.readdirSync(`${path}/${id}`).sort();
-	const version = versions.pop();
-	electron.BrowserWindow.addDevToolsExtension(`${path}/${id}/${version}`);
+	const extension = extensionPath();
+
+	if (!opts.version || opts.version === 'latest') {
+		const versions = fs.readdirSync(path.join(extension, id)).sort();
+		opts.version = versions.pop();
+	}
+
+	electron.BrowserWindow.addDevToolsExtension(path.join(extension, id, opts.version));
 };

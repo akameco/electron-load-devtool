@@ -1,6 +1,6 @@
 # electron-load-devtool [![Build Status](https://travis-ci.org/akameco/electron-load-devtool.svg?branch=master)](https://travis-ci.org/akameco/electron-load-devtool)
 
-> Easily Load dev tool for electron
+> Easily Load devtools-extension for electron
 
 See [electron/devtools-extension.md](https://github.com/electron/electron/blob/master/docs/tutorial/devtools-extension.md)
 
@@ -48,6 +48,12 @@ Default: `google-chrome`
 
 If you using chromium, set `chromium`.
 
+##### version
+
+Type: `string`<br>
+Default: `latest`
+
+Specific devtools-extension version.
 
 ## License
 
