@@ -1,7 +1,7 @@
 {
   "name": "electron-load-devtool",
   "version": "0.0.0",
-  "description": "My bee&#39;s knees module",
+  "description": "Easily load dev-tool for electron",
   "license": "MIT",
   "repository": "akameco/electron-load-devtool",
   "author": {
