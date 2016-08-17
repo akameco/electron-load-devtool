@@ -55,6 +55,17 @@ Default: `latest`
 
 Specific devtools-extension version.
 
+## devtools-extension ids table
+
+name | id
+--- | ---
+react-developer-tools | fmkadmapgofadopljbjfkapdkoienihi
+redux-devtools | lmhkpmbekcpmknklioeibfkpmmfibljd
+angularjs-batarang | ighdmehidhipcmcojjgiloacoafjmpfk
+vuejs-devtools | nhdogjmejiglipccpnnnanhbledajbpd
+vuejs-devtools | nhdogjmejiglipccpnnnanhbledajbpd
+ember-inspector | bmdblncegkenkacieihfhpjfppoconhi
+
 ## License
 
 MIT © [akameco](http://akameco.github.io)
