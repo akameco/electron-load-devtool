@@ -12,7 +12,7 @@ And, support some devtool-extensions like redux-devtools by default.
 ## Install
 
 ```
-$ npm install --save electron-load-devtool
+$ npm install --save-dev electron-load-devtool
 ```
 
 
