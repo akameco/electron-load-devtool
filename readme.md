@@ -2,7 +2,12 @@
 
 > Easily Load devtools-extension for electron
 
-See [electron/devtools-extension.md](https://github.com/electron/electron/blob/master/docs/tutorial/devtools-extension.md)
+## why?
+
+Electron supports the Chrome DevTools Extension.  
+But, it's a [very bother](https://github.com/electron/electron/blob/master/docs/tutorial/devtools-extension.md).  
+This module can load simply for your development environment.
+And, support some devtool-extensions like redux-devtools by default.
 
 ## Install
 
@@ -14,26 +19,22 @@ $ npm install --save electron-load-devtool
 ## Usage
 
 ```js
-'use strict';
 const electron = require('electron');
-const electronLoadDevtool = require('electron-load-devtool');
-
-const reduxDevtool = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
+const loadDevtool = require('./');
 
 electron.app.on('ready', () => {
 	const win = new electron.BrowserWindow({width: 400, height: 400});
 	win.loadURL(`file://${__dirname}/index.html`);
 
-	electronLoadDevTool(reduxDevtool);
+	loadDevtool(loadDevtool.REDUX_DEVTOOLS);
 
 	win.openDevTools();
 });
 ```
 
-
 ## API
 
-### electronLoadDevtool(devtoolId, [options])
+### `loadDevtool(devtoolId, [options])`
 
 #### devtoolId
 
@@ -46,7 +47,7 @@ Type: `string`
 Type: `string`<br>
 Default: `google-chrome`
 
-If you using chromium, set `chromium`.
+If you using chromium on Linux, set `chromium`.
 
 ##### version
 
@@ -55,16 +56,19 @@ Default: `latest`
 
 Specific devtools-extension version.
 
-## devtools-extension ids table
+### `loadDevtool.REDUX_DEVTOOLS`
 
-name | id
---- | ---
-react-developer-tools | fmkadmapgofadopljbjfkapdkoienihi
-redux-devtools | lmhkpmbekcpmknklioeibfkpmmfibljd
-angularjs-batarang | ighdmehidhipcmcojjgiloacoafjmpfk
-vuejs-devtools | nhdogjmejiglipccpnnnanhbledajbpd
-vuejs-devtools | nhdogjmejiglipccpnnnanhbledajbpd
-ember-inspector | bmdblncegkenkacieihfhpjfppoconhi
+### `loadDevtool.EMBER_INSPECTOR`
+
+### `loadDevtool.REACT_DEVELOPER_TOOLS`
+
+### `loadDevtool.BACKBONE_DEBUGGER`
+
+### `loadDevtool.JQUERY_DEBUGGER`
+
+### `loadDevtool.ANGULARJS_BATARANG`
+
+### `loadDevtool.VUEJS_DEVTOOLS`
 
 ## License
 

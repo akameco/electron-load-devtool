@@ -31,7 +31,7 @@ const extensionPath = name => {
 	return linux(name);
 };
 
-module.exports = (id, opts) => {
+const x = module.exports = (id, opts) => {
 	if (typeof id !== 'string') {
 		throw new TypeError('Expected a string');
 	}
@@ -51,3 +51,11 @@ module.exports = (id, opts) => {
 
 	electron.BrowserWindow.addDevToolsExtension(path.join(extension, id, opts.version));
 };
+
+x.REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
+x.EMBER_INSPECTOR = 'bmdblncegkenkacieihfhpjfppoconhi';
+x.REACT_DEVELOPER_TOOLS = 'fmkadmapgofadopljbjfkapdkoienihi';
+x.BACKBONE_DEBUGGER = 'bhljhndlimiafopmmhjlgfpnnchjjbhd';
+x.JQUERY_DEBUGGER = 'dbhhnnnpaeobfddmlalhnehgclcmjimi';
+x.ANGULARJS_BATARANG = 'ighdmehidhipcmcojjgiloacoafjmpfk';
+x.VUEJS_DEVTOOLS = 'nhdogjmejiglipccpnnnanhbledajbpd';
