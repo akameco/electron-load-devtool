@@ -3,6 +3,9 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const electron = require('electron');
+const isDev = require('electron-is-dev');
+
+const BrowserWindow = electron.BrowserWindow;
 
 const env = process.env;
 const homedir = os.homedir();
@@ -31,9 +34,25 @@ const extensionPath = name => {
 	return linux(name);
 };
 
-const x = module.exports = (id, opts) => {
-	if (typeof id !== 'string') {
-		throw new TypeError('Expected a string');
+const x = module.exports = (target, opts) => {
+	opts = Object.assign({
+		enabled: null
+	}, opts);
+
+	if (opts.enabled === false && (opts.enabled === null && isDev)) {
+		return;
+	}
+
+	if (typeof target === 'string') {
+		target = {id: target};
+	}
+
+	const alredyAdded = target.name &&
+		BrowserWindow.getDevToolsExtensions &&
+		{}.hasOwnProperty.call(BrowserWindow.getDevToolsExtensions(), target.name);
+
+	if (alredyAdded) {
+		return;
 	}
 
 	opts = opts || {};
@@ -45,17 +64,44 @@ const x = module.exports = (id, opts) => {
 	const extension = extensionPath();
 
 	if (!opts.version || opts.version === 'latest') {
-		const versions = fs.readdirSync(path.join(extension, id)).sort();
+		const versions = fs.readdirSync(path.join(extension, target.id)).sort();
 		opts.version = versions.pop();
 	}
 
-	electron.BrowserWindow.addDevToolsExtension(path.join(extension, id, opts.version));
+	BrowserWindow.addDevToolsExtension(path.join(extension, target.id, opts.version));
 };
 
-x.REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
-x.EMBER_INSPECTOR = 'bmdblncegkenkacieihfhpjfppoconhi';
-x.REACT_DEVELOPER_TOOLS = 'fmkadmapgofadopljbjfkapdkoienihi';
-x.BACKBONE_DEBUGGER = 'bhljhndlimiafopmmhjlgfpnnchjjbhd';
-x.JQUERY_DEBUGGER = 'dbhhnnnpaeobfddmlalhnehgclcmjimi';
-x.ANGULARJS_BATARANG = 'ighdmehidhipcmcojjgiloacoafjmpfk';
-x.VUEJS_DEVTOOLS = 'nhdogjmejiglipccpnnnanhbledajbpd';
+x.REDUX_DEVTOOLS = {
+	id: 'lmhkpmbekcpmknklioeibfkpmmfibljd',
+	name: 'Redux DevTools'
+};
+
+x.EMBER_INSPECTOR = {
+	id: 'bmdblncegkenkacieihfhpjfppoconhi',
+	name: 'Ember Inspector'
+};
+
+x.REACT_DEVELOPER_TOOLS = {
+	id: 'fmkadmapgofadopljbjfkapdkoienihi',
+	name: 'React Developer Tools'
+};
+
+x.BACKBONE_DEBUGGER = {
+	id: 'bhljhndlimiafopmmhjlgfpnnchjjbhd',
+	name: 'Backbone Debugger'
+};
+
+x.JQUERY_DEBUGGER = {
+	id: 'dbhhnnnpaeobfddmlalhnehgclcmjimi',
+	name: 'jQuery Debugger'
+};
+
+x.ANGULARJS_BATARANG = {
+	id: 'ighdmehidhipcmcojjgiloacoafjmpfk',
+	name: 'AngularJS Batarang'
+};
+
+x.VUEJS_DEVTOOLS = {
+	id: 'nhdogjmejiglipccpnnnanhbledajbpd',
+	name: 'Vue.js devtools'
+};
