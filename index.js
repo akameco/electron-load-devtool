@@ -64,7 +64,12 @@ const x = module.exports = (target, opts) => {
 	const extension = extensionPath();
 
 	if (!opts.version || opts.version === 'latest') {
-		const versions = fs.readdirSync(path.join(extension, target.id)).sort();
+		try {
+			const versions = fs.readdirSync(path.join(extension, target.id)).sort();
+		} catch (err) {
+			console.warn("Skip loading '" + target.name + "' because it can't be found. Please install at Chrome Web Store.");
+			return;
+		}
 		opts.version = versions.pop();
 	}
 
