@@ -7,6 +7,7 @@ electron.app.on('ready', () => {
 	win.loadURL(`file://${__dirname}/fixture.html`);
 
 	devtool(devtool.REDUX_DEVTOOLS);
+	devtool(devtool.VUEJS_DEVTOOLS);
 
 	win.openDevTools();
 });
