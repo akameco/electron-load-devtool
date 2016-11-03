@@ -66,11 +66,11 @@ const x = module.exports = (target, opts) => {
 	if (!opts.version || opts.version === 'latest') {
 		try {
 			const versions = fs.readdirSync(path.join(extension, target.id)).sort();
+			opts.version = versions.pop();
 		} catch (err) {
-			console.warn("Skip loading '" + target.name + "' because it can't be found. Please install at Chrome Web Store.");
+			console.warn('Skip loading \'' + target.name + '\' because it can\'t be found. Please install at Chrome Web Store.');
 			return;
 		}
-		opts.version = versions.pop();
 	}
 
 	BrowserWindow.addDevToolsExtension(path.join(extension, target.id, opts.version));
