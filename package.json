@@ -25,8 +25,8 @@
     "electron-is-dev": "^0.1.2"
   },
   "devDependencies": {
-    "electron": "^1.4.5",
-    "xo": "^0.17.0"
+    "electron": "^1.4.13",
+    "xo": "^0.17.1"
   },
   "xo": {
     "esnext": true,
