@@ -49,6 +49,12 @@ Default: `google-chrome`
 
 If you using chromium on Linux, set `chromium`.
 
+##### profile
+Type: `string`<br>
+Default: `Default`
+
+Specific Chrome Profile name.
+
 ##### version
 
 Type: `string`<br>
