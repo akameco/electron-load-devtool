@@ -10,33 +10,35 @@ const BrowserWindow = electron.BrowserWindow;
 const env = process.env;
 const homedir = os.homedir();
 
-const macos = () => path.join(homedir, 'Library/Application Support/Google/Chrome/Default/Extensions');
+const macos = profile => path.join(homedir, 'Library', 'Application Support', 'Google', 'Chrome', profile, 'Extensions');
 
-const windows = () => {
+const windows = profile => {
 	const appData = env.LOCALAPPDATA || path.join(homedir, 'AppData', 'Local');
-	return path.join(appData, 'Google', 'Chrome', 'User Data', 'Default', 'Extensions');
+	return path.join(appData, 'Google', 'Chrome', 'User Data', profile, 'Extensions');
 };
 
-const linux = chrome => {
+const linux = (chrome, profile) => {
 	chrome = chrome || 'google-chrome';
-	return path.join(homedir, '.config', chrome, 'Default', 'Extensions');
+	return path.join(homedir, '.config', chrome, profile, 'Extensions');
 };
 
-const extensionPath = name => {
+const extensionPath = (name, profile) => {
 	if (process.platform === 'darwin') {
-		return macos();
+		return macos(profile);
 	}
 
 	if (process.platform === 'win32') {
-		return windows();
+		return windows(profile);
 	}
 
-	return linux(name);
+	return linux(name, profile);
 };
 
 const x = module.exports = (target, opts) => {
 	opts = Object.assign({
-		enabled: null
+		enabled: null,
+		name: 'google-chrome',
+		profile: 'Default'
 	}, opts);
 
 	if (opts.enabled === false && (opts.enabled === null && isDev)) {
@@ -55,13 +57,7 @@ const x = module.exports = (target, opts) => {
 		return;
 	}
 
-	opts = opts || {};
-
-	if (!opts.name) {
-		opts.name = 'google-chrome';
-	}
-
-	const extension = extensionPath();
+	const extension = extensionPath(opts.name, opts.profile);
 
 	if (!opts.version || opts.version === 'latest') {
 		try {
