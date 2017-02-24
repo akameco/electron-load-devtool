@@ -412,9 +412,9 @@ electron-is-dev@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.1.2.tgz#8a1043e32b3a1da1c3f553dce28ce764246167e3"
 
-electron@^1.4.13:
-  version "1.4.13"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.13.tgz#aecc073484c25d351007d75ad8972b0f2f835ab3"
+electron@^1.4.15:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.1.tgz#aa426e83bfb5919c3a492297eff368b67e66f1ae"
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
