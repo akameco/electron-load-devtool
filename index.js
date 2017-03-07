@@ -7,13 +7,12 @@ const isDev = require('electron-is-dev');
 
 const BrowserWindow = electron.BrowserWindow;
 
-const env = process.env;
 const homedir = os.homedir();
 
 const macos = profile => path.join(homedir, 'Library', 'Application Support', 'Google', 'Chrome', profile, 'Extensions');
 
 const windows = profile => {
-	const appData = env.LOCALAPPDATA || path.join(homedir, 'AppData', 'Local');
+	const appData = process.env.LOCALAPPDATA || path.join(homedir, 'AppData', 'Local');
 	return path.join(appData, 'Google', 'Chrome', 'User Data', profile, 'Extensions');
 };
 
