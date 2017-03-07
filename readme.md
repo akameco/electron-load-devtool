@@ -42,6 +42,13 @@ Type: `string`
 
 #### options
 
+#### enabled
+
+Type: `boolean`<br>
+
+Only runs when in development, unless overridden by the enabled option.
+So no need to guard it for production.
+
 ##### name
 
 Type: `string`<br>
