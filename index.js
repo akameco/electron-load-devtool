@@ -41,7 +41,7 @@ const x = module.exports = (target, opts) => {
 		profile: 'Default'
 	}, opts);
 
-	if (opts.enabled === false && (opts.enabled === null && isDev)) {
+	if (opts.enabled === false || (opts.enabled === null && !isDev)) {
 		return;
 	}
 
