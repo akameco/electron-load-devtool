@@ -42,7 +42,7 @@ Type: `string`
 
 #### options
 
-#### enabled
+##### enabled
 
 Type: `boolean`<br>
 
