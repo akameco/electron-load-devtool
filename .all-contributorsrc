@@ -1,0 +1,31 @@
+{
+  "projectName": "electron-load-devtool",
+  "projectOwner": "akameco",
+  "files": [
+    "readme.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "akameco",
+      "name": "akameco",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4002137?v=4",
+      "profile": "http://akameco.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "infra"
+      ]
+    },
+    {
+      "login": "mactkg",
+      "name": "mactkg",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/178418?v=4",
+      "profile": "http://mactkg.hateblo.jp",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}

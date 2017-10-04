@@ -10,6 +10,7 @@
     "url": "akameco.github.io"
   },
   "scripts": {
+    "add-contributor": "all-contributors add",
     "start": "electron fixture.js",
     "test": "xo"
   },
@@ -25,6 +26,7 @@
     "electron-is-dev": "^0.3.0"
   },
   "devDependencies": {
+    "all-contributors-cli": "^4.5.0",
     "electron": "^1.7.8",
     "xo": "^0.18.2"
   },
