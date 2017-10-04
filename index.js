@@ -33,7 +33,7 @@ const extensionPath = (name, profile) => {
 	return linux(name, profile);
 };
 
-const x = module.exports = (target, opts) => {
+module.exports = (target, opts) => {
 	opts = Object.assign({
 		enabled: null,
 		name: 'google-chrome',
@@ -70,6 +70,8 @@ const x = module.exports = (target, opts) => {
 
 	BrowserWindow.addDevToolsExtension(path.join(extension, target.id, opts.version));
 };
+
+const x = module.exports;
 
 x.REDUX_DEVTOOLS = {
 	id: 'lmhkpmbekcpmknklioeibfkpmmfibljd',

@@ -22,10 +22,10 @@
     "extention"
   ],
   "dependencies": {
-    "electron-is-dev": "^0.1.2"
+    "electron-is-dev": "^0.3.0"
   },
   "devDependencies": {
-    "electron": "^1.6.8",
+    "electron": "^1.7.8",
     "xo": "^0.18.2"
   },
   "xo": {
