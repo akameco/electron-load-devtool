@@ -1,4 +1,5 @@
 # electron-load-devtool
+
 [![Build Status](https://travis-ci.org/akameco/electron-load-devtool.svg?branch=master)](https://travis-ci.org/akameco/electron-load-devtool)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
@@ -17,21 +18,20 @@ And, support some devtool-extensions like redux-devtools by default.
 $ npm install --save-dev electron-load-devtool
 ```
 
-
 ## Usage
 
 ```js
-const electron = require('electron');
-const loadDevtool = require('electron-load-devtool');
+const electron = require('electron')
+const loadDevtool = require('electron-load-devtool')
 
 electron.app.on('ready', () => {
-	const win = new electron.BrowserWindow({width: 400, height: 400});
-	win.loadURL(`file://${__dirname}/index.html`);
+	const win = new electron.BrowserWindow({ width: 400, height: 400 })
+	win.loadURL(`file://${__dirname}/index.html`)
 
-	loadDevtool(loadDevtool.REDUX_DEVTOOLS);
+	loadDevtool(loadDevtool.REDUX_DEVTOOLS)
 
-	win.openDevTools();
-});
+	win.openDevTools()
+})
 ```
 
 ## API
@@ -59,6 +59,7 @@ Default: `google-chrome`
 If you using chromium on Linux, set `chromium`.
 
 ##### profile
+
 Type: `string`<br>
 Default: `Default`
 
@@ -90,8 +91,11 @@ Specific devtools-extension version.
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 | [<img src="https://avatars2.githubusercontent.com/u/4002137?v=4" width="100px;"/><br /><sub>akameco</sub>](http://akameco.github.io)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Code") [📖](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Documentation") [🚇](#infra-akameco "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars2.githubusercontent.com/u/178418?v=4" width="100px;"/><br /><sub>mactkg</sub>](http://mactkg.hateblo.jp)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=mactkg "Code") |
-| :---: | :---: |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
