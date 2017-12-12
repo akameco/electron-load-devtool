@@ -11,9 +11,15 @@
   },
   "scripts": {
     "add-contributor": "all-contributors add",
+    "precommit": "lint-staged",
     "fmt": "prettier --write '**/*.{js,json,md}'",
     "start": "electron fixture.js",
     "test": "eslint . --fix"
+  },
+  "lint-staged": {
+    "*.js": ["fmt", "test", "git add"],
+    "*.json": ["fmt", "git add"],
+    "*.md": ["fmt", "git add"]
   },
   "files": ["index.js"],
   "keywords": ["electron", "chrome", "extention"],
@@ -25,6 +31,8 @@
     "electron": "^1.7.8",
     "eslint": "^4.13.1",
     "eslint-config-precure": "^0.11.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
     "prettier": "^1.9.2"
   }
 }
