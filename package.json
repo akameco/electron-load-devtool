@@ -1,6 +1,6 @@
 {
   "name": "electron-load-devtool",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "description": "Easily load dev-tool for electron",
   "license": "MIT",
   "repository": "akameco/electron-load-devtool",
