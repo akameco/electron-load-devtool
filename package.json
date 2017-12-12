@@ -9,6 +9,9 @@
     "email": "akameco.t@gmail.com",
     "url": "akameco.github.io"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "add-contributor": "all-contributors add",
     "precommit": "lint-staged",
