@@ -135,3 +135,8 @@ x.VUEJS_DEVTOOLS = {
   id: 'nhdogjmejiglipccpnnnanhbledajbpd',
   name: 'Vue.js devtools'
 }
+
+x.VUEJS_DEVTOOLS_BETA = {
+  id: 'ljjemllljcmogpfapbkkighbhhppjdbg',
+  name: 'Vue.js devtools beta channel'
+}
