@@ -1,6 +1,6 @@
 'use strict'
 const electron = require('electron')
-const devtool = require('./')
+const devtool = require('.')
 
 electron.app.on('ready', () => {
   const win = new electron.BrowserWindow({ width: 400, height: 400 })

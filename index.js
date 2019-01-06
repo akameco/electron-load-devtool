@@ -51,14 +51,12 @@ const extensionPath = (name, profile) => {
 }
 
 module.exports = (target, opts) => {
-  opts = Object.assign(
-    {
-      enabled: null,
-      name: 'google-chrome',
-      profile: 'Default'
-    },
-    opts
-  )
+  opts = {
+    enabled: null,
+    name: 'google-chrome',
+    profile: 'Default',
+    ...opts
+  }
 
   if (opts.enabled === false || (opts.enabled === null && !isDev)) {
     return
@@ -83,7 +81,7 @@ module.exports = (target, opts) => {
     try {
       const versions = fs.readdirSync(path.join(extension, target.id)).sort()
       opts.version = versions.pop()
-    } catch (err) {
+    } catch (error) {
       // eslint-disable-next-line no-console
       console.warn(
         `Skip loading '${
