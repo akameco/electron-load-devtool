@@ -1,7 +1,6 @@
 # electron-load-devtool
 
 [![Build Status](https://travis-ci.org/akameco/electron-load-devtool.svg?branch=master)](https://travis-ci.org/akameco/electron-load-devtool)
-[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/electron-load-devtool.svg)](https://greenkeeper.io/)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 > Easily Load devtools-extension for electron
