@@ -26,6 +26,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jpoppe",
+      "name": "Jasper Poppe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/65505?v=4",
+      "profile": "https://github.com/jpoppe",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }
