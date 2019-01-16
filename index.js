@@ -35,7 +35,12 @@ const windows = profile => {
 
 const linux = (chrome, profile) => {
   chrome = chrome || 'google-chrome'
-  return path.join(homedir, '.config', chrome, profile, 'Extensions')
+  const configPath = path.join('.config', chrome, profile, 'Extensions')
+  const candidates = [
+    path.join(homedir, configPath),
+    path.join(homedir, 'snap', chrome, 'current', configPath)
+  ]
+  return candidates.find(candidate => fs.existsSync(candidate))
 }
 
 const extensionPath = (name, profile) => {
