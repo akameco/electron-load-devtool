@@ -1,7 +1,7 @@
 # electron-load-devtool
 
 [![Build Status](https://travis-ci.org/akameco/electron-load-devtool.svg?branch=master)](https://travis-ci.org/akameco/electron-load-devtool)
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 > Easily Load devtools-extension for electron
 
@@ -94,9 +94,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/4002137?v=4" width="100px;"/><br /><sub><b>akameco</b></sub>](http://akameco.github.io)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Code") [📖](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Documentation") [🚇](#infra-akameco "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars2.githubusercontent.com/u/178418?v=4" width="100px;"/><br /><sub><b>mactkg</b></sub>](http://mactkg.hateblo.jp)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=mactkg "Code") | [<img src="https://avatars3.githubusercontent.com/u/65505?v=4" width="100px;"/><br /><sub><b>Jasper Poppe</b></sub>](https://github.com/jpoppe)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=jpoppe "Code") |
-| :---: | :---: | :---: |
-
+| [<img src="https://avatars2.githubusercontent.com/u/4002137?v=4" width="100px;"/><br /><sub><b>akameco</b></sub>](http://akameco.github.io)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Code") [📖](https://github.com/akameco/electron-load-devtool/commits?author=akameco "Documentation") [🚇](#infra-akameco "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars2.githubusercontent.com/u/178418?v=4" width="100px;"/><br /><sub><b>mactkg</b></sub>](http://mactkg.hateblo.jp)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=mactkg "Code") | [<img src="https://avatars3.githubusercontent.com/u/65505?v=4" width="100px;"/><br /><sub><b>Jasper Poppe</b></sub>](https://github.com/jpoppe)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=jpoppe "Code") | [<img src="https://avatars0.githubusercontent.com/u/5965113?v=4" width="100px;"/><br /><sub><b>Yoshiyuki Kinjo</b></sub>](https://github.com/yskkin)<br />[💻](https://github.com/akameco/electron-load-devtool/commits?author=yskkin "Code") |
+| :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
